@@ -27,10 +27,9 @@ function ink() {
 function doKeypad() {
   var keypad = document.getElementById("keypad");
 
-  const keytops = [ [ aco,'ח','ז','ו','ה','ד','ג','ב','א'],
-                    [ hlm,'ס','נ','מ','ל','כ','י','ט',dmq],
-                    [ mqf,'ת','שׂ','שׁ','ר','ק','צ','פ','ע'],
-                    [ sva,hsg,sgl,zre,hpt,pth,qmz,hqz,hir,qbz]
+  const keytops = [ [ 'ץ','ף','ן','ם','ך',aco,'ח','ז','ו','ה','ד','ג','ב','א'],
+                    [ sva,hsg,sgl,zre,hpt,hlm,'ס','נ','מ','ל','כ','י','ט',dmq],
+                    [ pth,qmz,hqz,hir,qbz,mqf,'ת','שׂ','שׁ','ר','ק','צ','פ','ע'],
   ];
 
   for (var r = 0; r < keytops.length; r++) {
