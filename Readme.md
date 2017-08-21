@@ -1,3 +1,7 @@
 a half-baked "virtual" keyboard for Hebrew.
 
-TODO: add space after any of five sofit forms.
+TODO:
+ - add space key
+ - replace Holam after Vav with Holam Haser for Vav - defer until save/search
+ - on input force canonic order for accent mark, vowel sign and dagesh
+ - workaround Iconbit tablet bug - missing "Erase Right" &#x2326; glyph
