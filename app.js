@@ -1,5 +1,6 @@
 'use strict';
 
+const aco = '&#x05AB;' // Accent Ole
 const sva = '&#x05B0;' // Sheva
 const hsg = '&#x05B1;' // Hataf Segol
 const hpt = '&#x05B2;' // Hataf Patah
@@ -10,11 +11,12 @@ const sgl = '&#x05B6;' // Segol
 const pth = '&#x05B7;' // Patah
 const qmz = '&#x05B8;' // Qamats
 const hlm = '&#x05B9;' // Holam
-const hlz = '&#x05BA;' // Holam Haser for Vav (slight right)
+const hlv = '&#x05BA;' // Holam Haser for Vav (rests on Vav's "palm")
 const qbz = '&#x05BB;' // Qubuts
 const dmq = '&#x05BC;' // Dagesh or Mapiq
 const mtg = '&#x05BD;' // Meteg
 const mqf = '&#x05BE;' // Maqaf
+//const sofiot=[['כ','ך'],['מ','ם'],['נ','ן'],['פ','ף'],['צ','ץ']]
 
 var uin = document.getElementById("userinput");
 
@@ -25,10 +27,10 @@ function ink() {
 function doKeypad() {
   var keypad = document.getElementById("keypad");
 
-  const keytops = [ [ 'ח','ז','ו','ה','ד','ג','ב','א',hlm,mqf],
-                    [ 'ס','נ','מ','ל','כ','י','ט',dmq],
-                    [ 'ת','שׂ','שׁ','ר','ק','צ','פ','ע',qbz],
-                    [ sva,hsg,sgl,zre,hpt,pth,qmz,hqz,hir]
+  const keytops = [ [ aco,'ח','ז','ו','ה','ד','ג','ב','א'],
+                    [ hlm,'ס','נ','מ','ל','כ','י','ט',dmq],
+                    [ mqf,'ת','שׂ','שׁ','ר','ק','צ','פ','ע'],
+                    [ sva,hsg,sgl,zre,hpt,pth,qmz,hqz,hir,qbz]
   ];
 
   for (var r = 0; r < keytops.length; r++) {
@@ -46,4 +48,3 @@ function doKeypad() {
 
 doKeypad();
 
-//const sofiot=[['כ','ך'],['מ','ם'],['נ','ן'],['פ','ף'],['צ','ץ']]
