@@ -23,7 +23,7 @@ function ink() {
 }
 
 function doKeypad() {
-  var keypad = document.querySelector(".keypad");
+  var keypad = document.getElementById("keypad");
 
   const keytops = [ [ 'ח','ז','ו','ה','ד','ג','ב','א',hlm,mqf],
                     [ 'ס','נ','מ','ל','כ','י','ט',dmq],
@@ -45,3 +45,5 @@ function doKeypad() {
 }
 
 doKeypad();
+
+//const sofiot=[['כ','ך'],['מ','ם'],['נ','ן'],['פ','ף'],['צ','ץ']]
