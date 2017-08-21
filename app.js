@@ -24,11 +24,16 @@ function ink() {
   uin.value += this.innerHTML;
 }
 
+function bksp() {
+  var l = uin.value.length;
+  uin.value = uin.value.substr(0,l-1);
+}
+
 function doKeypad() {
   var keypad = document.getElementById("keypad");
 
   const keytops = [ [ 'ץ','ף','ן','ם','ך',aco,'ח','ז','ו','ה','ד','ג','ב','א'],
-                    [ sva,hsg,sgl,zre,hpt,hlm,'ס','נ','מ','ל','כ','י','ט',dmq],
+                    [ sva,hsg,sgl,zre,hpt,hlm,mtg,'ס','נ','מ','ל','כ','י','ט',dmq],
                     [ pth,qmz,hqz,hir,qbz,mqf,'ת','שׂ','שׁ','ר','ק','צ','פ','ע'],
   ];
 
@@ -43,7 +48,8 @@ function doKeypad() {
     }
     keypad.appendChild(row);
   }
+  var bkspkey = document.getElementById('bksp');
+  bkspkey.addEventListener("click",bksp);
 }
 
 doKeypad();
-
