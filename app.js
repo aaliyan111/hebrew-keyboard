@@ -14,10 +14,11 @@ const hlm = '&#x05B9;' // Holam
 const hlv = '&#x05BA;' // Holam Haser for Vav (rests on Vav's "palm")
 const qbz = '&#x05BB;' // Qubuts
 const dmq = '&#x05BC;' // Dagesh or Mapiq
+//const CGJ = '&#847;'   // Combining Grapheme Joiner (misnomer)
 const mtg = '&#x05BD;' // Meteg
 const mqf = '&#x05BE;' // Maqaf
-//const sofiot=[['כ','ך'],['מ','ם'],['נ','ן'],['פ','ף'],['צ','ץ']]
-
+const shd = 0x5C1; // Shin dot
+const sid = 0x5C2; // Sin dot
 var uin = document.getElementById("userinput");
 
 function ink() {
@@ -26,7 +27,12 @@ function ink() {
 
 function bksp() {
   var l = uin.value.length;
-  uin.value = uin.value.substr(0,l-1);
+  var bk= 1; // back this number of glyphs
+  if (l>1) {
+    var lc = uin.value.substr(l-1,1).charCodeAt();
+    bk = ((lc == shd) || (lc == sid)) ? 2 : 1;
+  }
+  uin.value = uin.value.substr(0,l-bk);
 }
 
 function doKeypad() {
